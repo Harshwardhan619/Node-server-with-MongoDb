@@ -44,7 +44,7 @@ server.on('listening', onListening);
 
 
 secureServer.listen(app.get('secPort'), () => {
-  console.log('Server listening on port ',app.get('secPort'));
+  console.log('Secure Server listening on port ',app.get('secPort'));
 });
 secureServer.on('error', onError);
 secureServer.on('listening', onListening);
@@ -107,5 +107,5 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
-  console.log('Listening on ' + bind);
+  // console.log('Listening on ' + bind);
 }
